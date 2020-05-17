@@ -1,5 +1,5 @@
 /* *****************************************************************************
- *  Name:              Alan Turing
- *  Coursera User ID:  123456
- *  Last modified:     1/1/2019
+ *  Name:              Wenyi Dai
+ *  Email:             pervaday@outlook.com
+ *  Last modified:     ${DATE}
  **************************************************************************** */
