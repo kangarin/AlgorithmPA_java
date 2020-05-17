@@ -14,8 +14,8 @@ public class Percolation {
     public Percolation(int n) {
         if (n <= 0) throw new IllegalArgumentException();
         width = n;
-        sourceID = n;
-        desID = n + 1;
+        sourceID = width * width;
+        desID = width * width + 1;
         isBlocked = new boolean[width * width + 2];
         weightedQuickUnionUF = new WeightedQuickUnionUF(width * width + 2);
         Arrays.fill(isBlocked, true);

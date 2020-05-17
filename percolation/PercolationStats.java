@@ -37,8 +37,11 @@ public class PercolationStats {
         width = n;
         trialTimes = trials;
         trialResults = new double[trialTimes];
+    }
+
+    public void doExperiments() {
         // do experiment n times
-        for (int i = 0; i < trials; i++) {
+        for (int i = 0; i < trialTimes; i++) {
             double curRatio = doOnePercolationTest();
             trialResults[i] = curRatio;
         }
@@ -95,7 +98,10 @@ public class PercolationStats {
     }
 
     public static void main(String[] args) {
-        PercolationStats percolationStats = new PercolationStats(Integer.parseInt(args[0]),
-                                                                 Integer.parseInt(args[1]));
+        assert (args.length >= 2);
+        int arg0 = Integer.parseInt(args[0]);
+        int arg1 = Integer.parseInt(args[1]);
+        PercolationStats percolationStats = new PercolationStats(arg0, arg1);
+        percolationStats.doExperiments();
     }
 }
